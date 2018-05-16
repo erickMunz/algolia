@@ -8,7 +8,7 @@ const Suggestion = ({ handleSubmit, hit }) => (
       {hit.objectID.includes('default-hit-') ? (
         <Highlight attribute='query' hit={hit} tagName='strong' />
       ) : (
-        <Highlight attribute='query' hit={hit} />
+        <Highlight attribute='baseDoc.title' hit={hit} />
       )}
     </span>
   </div>

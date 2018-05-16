@@ -12,7 +12,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  placeholder: 'Search 8,000+ lessons, articles, and videos'
+  placeholder: 'Busca entre nuestras guias seguro te sorprenderas'
 };
 
 const defaultPrefixRE = /^search\sfor\s\"/i;
@@ -24,13 +24,14 @@ function stripDefaultFixes(str) {
 
 function openSearchWindow(query = '') {
   return window.open(
-    `https://search.freecodecamp.org/?${qs.stringify({ q: query })}`,
+    `https://localhost:8000/?${qs.stringify({ q: query })}`,
     '_blank'
   );
 }
 
 const handleSubmit = e => {
   e.preventDefault();
+  console.log(e);
   const query = stripDefaultFixes(e.target.parentElement.innerText);
   const fallbackQueryNode = find(
     [...document.querySelectorAll('[data-fccobjectid]')],
@@ -45,7 +46,7 @@ const handleSubmit = e => {
   return openSearchWindow(query);
 };
 
-class FCCSearchBar extends React.PureComponent {
+class BDMXSearchBar extends React.PureComponent {
   componentDidMount() {
     const searchInput = document.querySelector('.ais-SearchBox-input');
     searchInput.id = 'fcc_instantsearch';
@@ -58,9 +59,9 @@ class FCCSearchBar extends React.PureComponent {
           dangerouslySetInnerHTML={{ __html: algolia.concat(overrides) }}
         />
         <InstantSearch
-          apiKey='4318af87aa3ce128708f1153556c6108'
-          appId='QMJYL5WYTI'
-          indexName='query_suggestions'
+          apiKey='c690254fe0f1b92c7fd6183feb92e0c9'
+          appId='NCCR9CY838'
+          indexName='guides'
           >
           <div className='fcc_search_wrapper'>
             <label className='fcc_sr_only' htmlFor='fcc_instantsearch'>
@@ -78,8 +79,8 @@ class FCCSearchBar extends React.PureComponent {
   }
 }
 
-FCCSearchBar.defaultProps = defaultProps;
-FCCSearchBar.displayName = 'FCCSearchBar';
-FCCSearchBar.propTypes = propTypes;
+BDMXSearchBar.defaultProps = defaultProps;
+BDMXSearchBar.displayName = 'BDMXSearchBar';
+BDMXSearchBar.propTypes = propTypes;
 
-export default FCCSearchBar;
+export default BDMXSearchBar;

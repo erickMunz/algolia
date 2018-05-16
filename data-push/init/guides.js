@@ -13,7 +13,8 @@ index.setSettings(
     searchableAttributes: ['title', 'content', 'category'],
     distinct: true,
     attributeForDistinct: 'id',
-    attributesForFaceting: ['category']
+    attributesForFaceting: ['category'],
+    attributesToHighlight: ['title']
   },
   (err, response) => {
     if (err) {

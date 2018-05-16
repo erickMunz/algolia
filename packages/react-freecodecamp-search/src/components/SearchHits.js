@@ -14,7 +14,7 @@ const CustomHits = connectAutoComplete(
         _highlightResult: {
           query: {
             value:
-              'Search for "<ais-highlight-0000000000>' +
+              'Resultados de: "<ais-highlight-0000000000>' +
               currentRefinement +
               '</ais-highlight-0000000000>"'
           }
@@ -40,6 +40,7 @@ const CustomHits = connectAutoComplete(
 );
 
 const SearchHits = connectStateResults(({ handleSubmit, searchState }) => {
+
   return isEmpty(searchState) || !searchState.query ? null : (
     <CustomHits handleSubmit={handleSubmit} />
   );

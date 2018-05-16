@@ -1,3 +1,3 @@
-import FCCSearchBar from './FCCSearchBar';
+import BDMXSearchBar from './BDMXSearchBar';
 
-export default FCCSearchBar;
+export default BDMXSearchBar;
