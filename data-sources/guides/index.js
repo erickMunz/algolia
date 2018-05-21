@@ -67,7 +67,7 @@ function getGuideArticleData() {
       Observable.fromPromise(
         new Promise((resolve, reject) => {
           svn.commands.checkout(
-            'https://github.com/erickMunz/guides/trunk/src/pages/',
+            'https://github.com/bigdatamx/guias-capacitacion/trunk/src/pages/',
             articlesDir,
             err => {
               if (err) {

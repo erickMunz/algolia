@@ -24,7 +24,7 @@ function stripDefaultFixes(str) {
 
 function openSearchWindow(query = '') {
   return window.open(
-    `https://localhost:8000/?${qs.stringify({ q: query })}`,
+    `http://localhost:8000/?${qs.stringify({ q: query })}`,
     '_blank'
   );
 }

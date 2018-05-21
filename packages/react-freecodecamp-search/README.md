@@ -1,25 +1,25 @@
-# react-freecodecamp-search
+# react-bigdatamx-search
 
 ## Install
 
-`npm install react-freecodecamp-search`
+`npm install react-bigdatamx-search`
 -or-
-`yarn add react-freecodecamp-search`
+`yarn add react-bigdatamx-search`
 
 ## Usage
 
 ```jsx
-import FCCSearchBar from 'react-freecodecamp-search';
+import BDMXSearchBar from 'react-bigdatamx-search';
 
 // in your component
 return (
-  <FCCSearchBar
+  <BDMXSearchBar
     placeholder='This is optional'
   />
 );
 ```
 
-Then search for something
+Despues busca algo
 
 ## Contributing
 
